@@ -6,18 +6,23 @@ import SidebarOption from "./SidebarOption";
 import { useDataLayerValue } from "../DataLayer";
 
 import "../styles/Sidebar.css";
+import { Avatar } from "@material-ui/core";
 
 export default function Sidebar() {
-  const [{ playlists }] = useDataLayerValue();
+  const [{ user, playlists }] = useDataLayerValue();
+
   console.log(playlists);
 
   return (
     <div className="sidebar">
-      <img
-        className="sidebar__logo"
-        src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
-        alt=""
-      />
+      <div>
+        <img
+          className="sidebar__logo"
+          src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
+          alt=""
+        />
+      </div>
+
       <SidebarOption Icon={HomeIcon} title="Home" />
       <SidebarOption Icon={SearchIcon} title="Search" />
       <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />

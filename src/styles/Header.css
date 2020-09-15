@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 30px;
 }
 
 .header__left {
@@ -13,7 +12,7 @@
   flex: 0.5;
   min-width: 55px;
   overflow: hidden;
-  padding: 10px;
+  padding: 9px;
 }
 
 .header__left > input {
@@ -25,8 +24,21 @@
 .header__right {
   align-items: center;
   display: flex;
+
+  background-color: black;
+  border-radius: 50px;
+  padding-left: 3px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: fit-content;
+  width: auto;
 }
 
-.header__right > h4 {
+.header__right > h5 {
   margin-left: 10px;
+}
+.MuiAvatar-root {
+  width: 25px !important;
+  height: 25px !important;
 }

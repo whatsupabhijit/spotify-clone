@@ -12,7 +12,7 @@ export default function Body({ spotify }) {
 
   return (
     <div className="body">
-      <Header spotify={spotify} />
+      <Header spotify={spotify} className="body__header" />
       <div className="body__info">
         <img src={discover_weekly?.images[0].url} alt="" />
         <div className="body__infoText">
