@@ -77,6 +77,14 @@
   top: 50px;
 }
 
+.header {
+  /* background-color: none; */
+}
+
+.header2 {
+  background-color: #181818;
+}
+
 .body__tableheader {
   display: flex;
   flex-direction: row;
@@ -96,6 +104,8 @@
 
 .body__tableColumnFour {
   margin-right: 15px;
+  height: 14px;
+  size: 10px;
 }
 
 .body__hr {
@@ -109,12 +119,4 @@
   width: 92%;
   margin: 5px auto;
   margin-bottom: 10px;
-}
-
-.header {
-  background-color: none;
-}
-
-.header2 {
-  background-color: gray;
 }

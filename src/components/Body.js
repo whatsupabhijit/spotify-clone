@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import "../styles/Body.css";
 import { useDataLayerValue } from "../DataLayer";
@@ -13,22 +13,31 @@ export default function Body({ spotify }) {
 
   const [{ discover_today }] = useDataLayerValue();
 
-  const [header, setHeader] = useState("header");
+  const [header, setHeader] = useState("body__tablesticky header");
+
+  const stickyRef = useRef();
 
   const listenScrollEvent = (event) => {
-    console.log(event);
-    if (window.scrollY < 60) {
-      return setHeader("header");
-    } else if (window.scrollY >= 60) {
-      return setHeader("header2");
+    // console.log(event.clientX, event.clientY);
+    console.log(
+      stickyRef.current.offsetTop,
+      window.pageYOffset,
+      window.innerHeight
+    );
+
+    var rect = stickyRef.current.getBoundingClientRect().top;
+    console.log(rect);
+
+    if (stickyRef.current.getBoundingClientRect().top > 256) {
+      return setHeader("body__tablesticky header");
+    } else {
+      return setHeader("body__tablesticky header2");
     }
-    console.log(header);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-
-    // return () => window.removeEventListener("scroll", listenScrollEvent);
+    window.addEventListener("wheel", listenScrollEvent);
+    return () => window.removeEventListener("wheel", listenScrollEvent);
   }, []);
 
   return (
@@ -50,7 +59,7 @@ export default function Body({ spotify }) {
           <MoreHorizIcon />
         </div>
 
-        <div className="body__tablesticky {header}">
+        <div ref={stickyRef} className={header}>
           <div className="body__tableheader ">
             <div className="body__tableColumnLeft">
               <span>#</span>
