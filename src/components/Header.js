@@ -7,7 +7,7 @@ import { useDataLayerValue } from "../DataLayer";
 export default function Header() {
   const [{ user }] = useDataLayerValue();
   return (
-    <div className="header">
+    <nav className="header">
       <div className="header__left">
         <SearchIcon />
         <input
@@ -23,6 +23,6 @@ export default function Header() {
         />
         <h5>{user?.display_name}</h5>
       </div>
-    </div>
+    </nav>
   );
 }

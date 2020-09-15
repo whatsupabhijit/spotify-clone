@@ -34,6 +34,12 @@ const reducer = (state, action) => {
         discover_weekly: action.discover_weekly,
       };
 
+    case "SET_TODAYS_TOP_HITS":
+      return {
+        ...state,
+        discover_today: action.discover_today,
+      };
+
     default:
       return state;
   }

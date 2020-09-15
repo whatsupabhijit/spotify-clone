@@ -5,12 +5,8 @@
   height: 100vh;
   overflow-y: overlay;
   padding: 10px;
-}
 
-.body__header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50;
+  margin-bottom: 55px;
 }
 
 .body::-webkit-scrollbar {
