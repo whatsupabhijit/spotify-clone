@@ -6,10 +6,9 @@ import SidebarOption from "./SidebarOption";
 import { useDataLayerValue } from "../DataLayer";
 
 import "../styles/Sidebar.css";
-import { Avatar } from "@material-ui/core";
 
 export default function Sidebar() {
-  const [{ user, playlists }] = useDataLayerValue();
+  const [{ playlists }] = useDataLayerValue();
 
   console.log(playlists);
 
