@@ -5,6 +5,10 @@
   height: 100vh;
   padding: 0 10px;
   min-width: 230px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .sidebar__logo {
