@@ -23,12 +23,14 @@
 }
 
 .songRow__info > p {
-  color: gray;
+  color: #ffffff;
   font-size: 14px;
   margin-top: 3px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
-.songRow__album {
+.songRow__albumImage {
   object-fit: contain;
   height: 40px;
   width: 40px;

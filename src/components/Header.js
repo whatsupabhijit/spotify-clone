@@ -11,9 +11,9 @@ export default function Header() {
 
   const listenScrollEvent = (event) => {
     var headerTop = bodyHeaderRef.current.getBoundingClientRect().top;
-    console.log(" header tops are:");
-    console.log(headerTop);
-    if (headerTop < 10) {
+    // console.log(" header tops are:");
+    // console.log(headerTop);
+    if (headerTop < 0) {
       return setHeaderSticker("header header__sticky");
     }
   };

@@ -68,7 +68,7 @@ export default function Body({ spotify }) {
 
         <div className="body__songrow">
           {discover_today?.tracks.items.map((item, i) => (
-            <SongRow key={i} track={item.track} />
+            <SongRow key={i} track={item.track} occur={i} />
           ))}
         </div>
       </div>
