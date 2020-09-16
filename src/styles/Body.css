@@ -6,7 +6,7 @@
   overflow-y: overlay;
   padding: 10px;
 
-  margin-bottom: 55px;
+  margin-bottom: 30px;
 }
 
 .body::-webkit-scrollbar {
@@ -75,14 +75,12 @@
   position: -webkit-sticky;
   position: sticky;
   top: 50px;
+  margin-top: 0px;
 }
 
-.header {
-  /* background-color: none; */
-}
-
-.header2 {
+.body__tablestickystick {
   background-color: #181818;
+  z-index: 2;
 }
 
 .body__tableheader {

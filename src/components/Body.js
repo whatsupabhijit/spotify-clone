@@ -13,25 +13,16 @@ export default function Body({ spotify }) {
 
   const [{ discover_today }] = useDataLayerValue();
 
-  const [header, setHeader] = useState("body__tablesticky header");
-
+  const [sticker, setSticker] = useState("body__tablesticky");
   const stickyRef = useRef();
 
   const listenScrollEvent = (event) => {
-    // console.log(event.clientX, event.clientY);
-    console.log(
-      stickyRef.current.offsetTop,
-      window.pageYOffset,
-      window.innerHeight
-    );
-
-    var rect = stickyRef.current.getBoundingClientRect().top;
-    console.log(rect);
-
-    if (stickyRef.current.getBoundingClientRect().top > 256) {
-      return setHeader("body__tablesticky header");
-    } else {
-      return setHeader("body__tablesticky header2");
+    var divTop = stickyRef.current.getBoundingClientRect().top;
+    // console.log(divTop);
+    if (divTop > 256 || divTop <= 0) {
+      return setSticker("body__tablesticky");
+    } else if (divTop > 0 && divTop <= 256) {
+      return setSticker("body__tablesticky body__tablestickystick");
     }
   };
 
@@ -59,7 +50,7 @@ export default function Body({ spotify }) {
           <MoreHorizIcon />
         </div>
 
-        <div ref={stickyRef} className={header}>
+        <div ref={stickyRef} className={sticker}>
           <div className="body__tableheader ">
             <div className="body__tableColumnLeft">
               <span>#</span>
