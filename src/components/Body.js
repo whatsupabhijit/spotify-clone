@@ -18,10 +18,11 @@ export default function Body({ spotify }) {
 
   const listenScrollEvent = (event) => {
     var divTop = stickyRef.current.getBoundingClientRect().top;
+    // console.log("div  tops are:");
     // console.log(divTop);
-    if (divTop > 256 || divTop <= 0) {
+    if (divTop > 236 || divTop <= 0) {
       return setSticker("body__tablesticky");
-    } else if (divTop > 0 && divTop <= 256) {
+    } else if (divTop > 0 && divTop <= 236) {
       return setSticker("body__tablesticky body__tablestickystick");
     }
   };
@@ -34,6 +35,7 @@ export default function Body({ spotify }) {
   return (
     <div className="body">
       <Header spotify={spotify} />
+
       <div className="body__info">
         <img src={discover_today?.images[0].url} alt="" />
         <div className="body__infoText">
@@ -64,9 +66,11 @@ export default function Body({ spotify }) {
           <hr className="body__hr" />
         </div>
 
-        {discover_today?.tracks.items.map((item, i) => (
-          <SongRow key={i} track={item.track} />
-        ))}
+        <div className="body__songrow">
+          {discover_today?.tracks.items.map((item, i) => (
+            <SongRow key={i} track={item.track} />
+          ))}
+        </div>
       </div>
     </div>
   );

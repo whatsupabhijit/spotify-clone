@@ -2,22 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  background: transparent;
+}
 
+.header__sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 5px;
+  background: teal;
+  z-index: 3;
 }
 
 .header__left {
   align-items: center;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 50px;
   color: gray;
   display: flex;
   flex: 0.5;
   min-width: 55px;
   overflow: hidden;
   padding: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .header__left > input {
@@ -38,6 +49,7 @@
   padding-bottom: 5px;
   height: fit-content;
   width: auto;
+  margin-right: 5px;
 }
 
 .header__right > h5 {

@@ -4,9 +4,10 @@
   flex: 0.83;
   height: 100vh;
   overflow-y: overlay;
-  padding: 10px;
+}
 
-  margin-bottom: 30px;
+.body__songrow {
+  margin-bottom: 60px;
 }
 
 .body::-webkit-scrollbar {
