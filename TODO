@@ -1,0 +1,25 @@
+1. Similar to mouse wheel, apply same logic to scroll. Test in mobile (desktop version) to see if its working.
+2. Remove the Search Box from header from all page. 
+3. Create Search Route and search component, show the search page there
+  3.1. Show recent searches 
+  3.2. Browse all - > Podcasts, Made for You, Charts, New releases, Discover, At Home, Higher Ground, League of Legends, Radar, Chill, Mandopop, Alternative,....
+  	3.2.1. Each of this will be separate routes. 
+	3.2.2. when clicked on this that page will open and it will show 
+		- Popular playlists udner it
+		- New Releases under it
+	3.2.3  Once a playlist is clicked show the Player Page.
+4. Your Library route - > show the playslists created by user.
+	when clicked on any playlist, again show the player page as it is currently showing.
+
+5. Heart Feautre.
+	5.1. When any song's heart icon is clicked, put it into Liked Songs Playlist,
+	5.2. In the sidebar show the Liked songs playlist
+	5.3 When clicked on this sidebar Liked Songs playlist, open that playlist
+
+6. Build the home rout.
+	6.1. Show below tiles
+		- Shortcuts
+		- Recently Played
+		- Made for you
+
+7. Finally PLAY/PAUSE/NEXT/PREV/SHUFFLE/REPEAT/SOUND buttons actually working :-)
