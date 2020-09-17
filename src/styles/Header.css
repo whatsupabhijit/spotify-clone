@@ -10,7 +10,10 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  background: #545b56;
+  /* background: #545b56;
+   */
+  background: teal;
+
   z-index: 3;
 }
 

@@ -2,6 +2,10 @@
   align-items: center;
   color: white;
   display: flex;
+  flex-direction: row;
+  flex: left;
+  justify-content: space-between;
+
   margin-left: 20px;
   padding: 5px 20px;
   transition: all 0.3s ease !important;
@@ -14,12 +18,44 @@
   opacity: 0.8;
 }
 
+.songRow__left {
+  display: flex;
+  align-items: center;
+  flex: 0.35;
+  /* Instead of flex could have used width also for left, middle and right */
+}
+
+.songRow__middle {
+  display: flex;
+  flex: 0.53;
+}
+
+.songRow__right {
+  display: flex;
+  flex: 0.05;
+}
+
+.songRow__serialNo {
+  margin-right: 15px;
+}
+
+.songRow__title {
+  display: flex;
+}
+
+.songRow__albumImage {
+  object-fit: contain;
+  margin-top: 5px;
+  height: 35px;
+  width: 35px;
+}
+
 .songRow__info {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .songRow__info > h1 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .songRow__info > p {
@@ -30,8 +66,8 @@
   font-weight: 400;
 }
 
-.songRow__albumImage {
-  object-fit: contain;
-  height: 40px;
-  width: 40px;
+.songRow__albumName {
+  justify-content: left;
+  margin-left: 100px;
+  font-size: 14px;
 }

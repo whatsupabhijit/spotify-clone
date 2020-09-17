@@ -20,9 +20,10 @@ export default function Body({ spotify }) {
     var divTop = stickyRef.current.getBoundingClientRect().top;
     // console.log("div  tops are:");
     // console.log(divTop);
-    if (divTop > 236 || divTop <= 0) {
+    // Best values working 70 and 236
+    if (divTop > 70 || divTop <= 0) {
       return setSticker("body__tablesticky");
-    } else if (divTop > 0 && divTop <= 236) {
+    } else if (divTop > 0 && divTop <= 70) {
       return setSticker("body__tablesticky body__tablestickystick");
     }
   };
